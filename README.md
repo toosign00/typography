@@ -1,3 +1,3 @@
 Typography Website  
   
-웹사이트 링크 - [text](https://toosign00.github.io/typography/)
+[Check out the website here](https://toosign00.github.io/typography/)
