@@ -1,3 +1,3 @@
 Typography Website  
   
-[Check out the website here](https://toosign00.github.io/typography/)
+<a href="https://toosign00.github.io/typography/" target="_blank">Check out the website here</a>
