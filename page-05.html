@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서체 디자이너</title>
+    <link rel="icon" href="/image/tab_icon.png"/> <!-- favicon -->
+    <link rel="apple-touch-icon" href="/image/tab_icon.png"/> <!-- apple-touch-icon -->
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Carattere&family=Hahmlet:wght@100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Jua&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Carattere, Roboto, Lora, Playfair Display, Hanken Grotesk, Montserrat, Hahmlet, Jua Font  -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" /> <!-- Pretendard font -->
+    <link rel="stylesheet" type="text/css" href="https://webfontbox.github.io/Arita/font.css"> <!-- Arita font -->
+    <link rel="stylesheet" type="text/css" href="https://webfontbox.github.io/Arita/font.min.css"> <!-- Arita font -->
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/maru-buri.css" rel="stylesheet"> <!-- Maru Buri font -->
+    <link href="https://fonts.cdnfonts.com/css/univers" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/frutiger" rel="stylesheet">
+    <link rel="stylesheet" href="./css/global.css"> <!-- global css -->
+    <link rel="stylesheet" href="./css/page-05.css"> <!-- page-05 css -->
+    <style>
+        .nav-link:nth-child(5) {
+            background: var(--secondary-color);
+            color: var(--primary-color);
+        }
+
+        .dark-mode .nav-link:nth-child(5) {
+            background: var(--primary-color);
+            color: var(--secondary-color);
+            border-color: var(--primary-color);
+        }
+    </style>
+</head>
+
+<body class="loading">
+    <script>
+        // 페이지 로드 전에 다크 모드 설정 적용
+        (function() {
+        const isDarkMode = sessionStorage.getItem('darkMode') === 'true';
+        if (isDarkMode) {
+            document.body.classList.add('dark-mode');
+            }
+        })();
+    </script>
+    
+    <header> <!-- 헤더 -->
+        <!-- ========== width 851px 이상 ========== -->
+        <a href="index.html" class="header-link"> <!-- 로고 -->
+            <img src="./image/logo.svg" alt="로고" class="header-logo">
+        </a>
+        <nav> <!-- 네비게이션 -->
+        <div class="nav-links"> 
+            <a href="./page-01.html" class="nav-link">서체의 역사</a>
+            <a href="./page-02.html" class="nav-link">자간과 행간 사이</a>
+            <a href="./page-03.html" class="nav-link">크기와 무게</a>
+            <a href="./page-04.html" class="nav-link">여러가지 폰트</a>
+            <a href="./page-05.html" class="nav-link">서체 디자이너</a>
+        </div>
+        <!-- ========== width 851px 이상 ========== -->
+
+        <!-- ========== width 850px 이하 ========== -->
+        <button class="menu-btn"> <!-- 메뉴 버튼 -->
+            <img src="./image/menu-icon.svg" alt="메뉴" id="tech-btn">
+        </button>
+        <div class="toggle-nav-container">
+            <div class="toggle-nav">
+                <a href="./page-01.html" class="nav-link">서체의 역사</a>
+                <a href="./page-02.html" class="nav-link">자간과 행간 사이</a>
+                <a href="./page-03.html" class="nav-link">크기와 무게</a>
+                <a href="./page-04.html" class="nav-link">여러가지 폰트</a>
+                <a href="./page-05.html" class="nav-link">서체 디자이너</a>
+            </div>
+        </div>
+        <!-- ========== width 850px 이하 ========== -->
+        </nav>
+        <div class="toggle-switch"> <!-- 다크 모드 토글 스위치 -->
+            <label class="switch" for="darkModeToggle">
+                <input type="checkbox" id="darkModeToggle" class="checkbox">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </header> <!-- 헤더 끝 -->
+
+    <main>
+        <section>
+            <article class="intro-wrap">
+                <h1 class="intro-title">안상수 <span style="font-size: 1.5rem; font-weight: 400;">한글타이포그래피의 선구자</span></h1>
+                <div class="intro-container">
+                    <img src="./image/designer_01.png" alt="" class="intro-main-img">
+                    <div class="intro-text-container">
+                        <p class="main-text">시각디자이너, 타이포그라퍼. 1985년 ‘안상수체’를 멋지어 한글 글꼴의 탈네모 흐름을 이끌었으며, 이후 이상체, 미르체, 마노체 등을 선보였다. 1988년 실험잡지
+                            「보고서/ 보고서」를 창간, 전위적인 타이포그라피를 실험하며 현재까지 한글 타이포그라피를 바탕으로 한 작업을 선보이고 있다. 세계 여러 나라에서 개인전 및 단체전에
+                            참여했으며, 공로를 인정받아 2007년 독일 라이프치히시가 수여하는 구텐베르크상을, 2016년 홍콩디자인센터가 주관한 DFA(Design For ASIA
+                            Award)에서 평생공로상을 받았다. 2012년, 20여 년간 교수로 재직하던 홍익대를 그만 두고, 파주출판도시에 독립 디자인 학교 ‘파티(PaTI,
+                            파주타이포그라피배곳)’를 세우는 데 힘쓰며, 활동을 이어가고 있다.</p>
+                    </div>
+                </div>
+                <p class="sub-text-title">안상수가 제작에 참여한 서체들</p>
+                        <p class="sub-text-01">아리따 글꼴</p>
+                        <p class="sub-text-02">나눔 부리 글꼴</p>
+                        <p class="sub-text-03">마루 부리 글꼴</p>
+            </article>
+
+            <article class="intro-wrap">
+                <h1 class="intro-title">아드리안 프루티거 <span style="font-size: 1.5rem; font-weight: 400;">Univers, across the
+                        univers</span></h1>
+                <div class="intro-container">
+                    <img src="./image/designer_02.png" alt="" class="intro-main-img">
+                    <div class="intro-text-container">
+                        <p class="main-text">아드리안 프루티거는 현대 타이포그래피의 거장으로 평가받는 인물입니다. 그는 단순히 아름다운 서체를 디자인하는 데 그치지 않고,
+                            타이포그래피의 본질적인 가치와 기능에 대해 깊이 고민했습니다.
+                            프루티거의 디자인 철학의 핵심은 "가독성"과 "기능성"이었습니다. 그는 서체가 메시지를 효과적으로 전달하는 도구이므로 가독성이 최우선이어야 한다고 믿었습니다. 이에
+                            따라 그는 복잡한 장식이나 과도한 디테일보다는 간결하고 명료한 형태를 추구했습니다.
+                            이를 통해 독자가 메시지에 집중할 수 있도록 하는 것이 프루티거의 목표였습니다. 그의 이러한 철학은 Univers, Frutiger, Avenir, Vectora 등
+                            그가 디자인한 다양한 서체에 고스란히 녹아있습니다. 프루티거는 타이포그래피계에 큰 영향을 미친 거장으로, 서체 디자인의 기능성과 가독성을 중시한 그의 사상은 오랫동안
+                            기억될 것입니다.
+                        </p>
+                    </div>
+                </div>
+                <p class="sub-text-title">아드리안 프루티거가 제작한 서체들</p>
+                <p class="sub-text-01-2">Univers</p>
+                <p class="sub-text-02-2">Frutiger</p>
+            </article>
+        </section>
+    </main>
+    <footer> <!-- 푸터 start -->
+        <a href="index.html">
+            <img src="./image/logo.svg" alt="로고" class="footer-logo">
+        </a>
+        <div class="footer-text-wrap">
+            <p class="footer-text">ⓒ 2024. HyunSoo Ro All rights reserved.</p>
+            <p class="footer-text">Contact : toosign22361041@kaywon.ac.kr</p>
+        </div>
+    </footer> <!-- 푸터 end -->
+    
+    <script src="./script/global.js"></script>
+</body>
+
+</html>

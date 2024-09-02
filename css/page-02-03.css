@@ -1,0 +1,317 @@
+/* page-02.html, page-03.html에 적용되는 css */
+
+/*  <----------------------------- page-02 page-03 common css start  -----------------------------> */
+.body {
+    --radius: .5rem;
+    --border: .25rem;
+    --height: 1.875rem;
+    --speed: 0.25s;
+    display: grid;
+    place-items: center;
+    align-content: center;
+}
+
+.page-02-03-flex-wrap {
+    height: auto;
+    margin-top: 4.375rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 6.25rem;
+    flex-wrap: nowrap;
+}
+
+@media screen and (max-width: 1200px) {
+    .page-02-03-flex-wrap {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+}
+
+.left-container {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    /* 왼쪽 정렬 */
+    gap: 6.25rem;
+}
+
+.l-c-title {
+    font-size: 1.5rem;
+    text-align: left;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.l-c-p {
+    font-size: 1rem;
+    text-align: left;
+    width: 100%;
+}
+
+.right-container {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+}
+
+.r-c-p {
+    width: 100%;
+    font-size: 16px;
+    text-align: justify;
+    transition: font-size 0.4s ease,
+        font-weight 0.4s ease,
+        letter-spacing 0.4s ease,
+        line-height 0.4s ease;
+}
+
+.select-input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: #181818;
+    color: #eaeaea;
+    border: var(--border) solid #181818;
+    border-radius: .5rem;
+    padding: 0 clamp(.625rem, .625rem + .625rem, 1.25rem);
+    height: 1.875rem;
+    font-size: 0.8rem;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    transition: all .1s ease-in-out;
+}
+
+.select-input:hover {
+    background-color: #b1b1b1;
+    color: #181818;
+    border: var(--border) solid #181818;
+}
+
+.select-input option {
+    background-color: #181818;
+    color: #eaeaea;
+}
+
+.dark-mode .select-input {
+    background: #eaeaea;
+    color: #181818;
+    border: var(--border) solid #eaeaea;
+}
+
+.dark-mode .select-input:hover {
+    background-color: #b1b1b1;
+    color: #181818;
+    border: var(--border) solid #eaeaea;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 15px;
+}
+
+/* <----------------------------- page-02 page-03 common css end -----------------------------> */
+
+
+
+/* <----------------------------- page-02 css start -----------------------------> */
+.tabs {
+    height: var(--height);
+    display: grid;
+    grid-auto-flow: column;
+    background: #181818;
+    border-radius: var(--radius);
+    grid-auto-columns: 1fr;
+    position: relative;
+    border: var(--border) solid #181818;
+}
+
+.tabs {
+    --ease: linear(0,
+            0.1641 3.52%,
+            0.311 7.18%,
+            0.4413 10.99%,
+            0.5553 14.96%,
+            0.6539 19.12%,
+            0.738 23.5%,
+            0.8086 28.15%,
+            0.8662 33.12%,
+            0.9078 37.92%,
+            0.9405 43.12%,
+            0.965 48.84%,
+            0.9821 55.28%,
+            0.992 61.97%,
+            0.9976 70.09%,
+            1);
+}
+
+.tabs>.input,
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.tabs:has(:checked:nth-of-type(1)) {
+    --active: 0;
+}
+
+.tabs:has(:checked:nth-of-type(2)) {
+    --active: 1;
+}
+
+.tabs:has(:checked:nth-of-type(3)) {
+    --active: 2;
+}
+
+.tabs:has(:checked:nth-of-type(4)) {
+    --active: 3;
+}
+
+.tabs :checked+.label {
+    --highlight: 1;
+}
+
+.tabs:has(.input:nth-of-type(2)) {
+    --count: 2;
+}
+
+.tabs:has(.input:nth-of-type(3)) {
+    --count: 3;
+}
+
+.tabs:has(.input:nth-of-type(4)) {
+    --count: 4;
+}
+
+.tabs .label {
+    padding: 0 clamp(.625rem, .625rem + .625rem, 1.25rem);
+    cursor: pointer;
+    text-align: center;
+    height: 100%;
+    display: grid;
+    border-radius: calc(var(--radius) - var(--border));
+    place-items: center;
+    transition: background, color;
+    transition-duration: 0.25s;
+    transition-timing-function: var(--ease, ease);
+    font-size: .8rem;
+    color: #b1b1b1;
+}
+
+.input:not(:checked)+.label:hover {
+    --highlight: 0.35;
+    background: #333333;
+}
+
+.tabs::after {
+    pointer-events: none;
+    content: "";
+    width: calc(100% / var(--count));
+    height: 100%;
+    background: #eaeaea;
+    position: absolute;
+    border-radius: calc(var(--radius) - var(--border));
+    mix-blend-mode: difference;
+    translate: calc(var(--active, 0) * 100%) 0;
+    transition: translate, outline-color;
+    transition-duration: var(--speed);
+    transition-timing-function: var(--ease, ease);
+    outline: 2px solid transparent;
+}
+
+.tabs:has(:focus-visible)::after {
+    outline-color: red;
+}
+
+.dark-mode .tabs {
+    background: #eaeaea;
+    border: var(--border) solid #eaeaea;
+}
+
+.dark-mode .tabs .label {
+    color: #181818;
+}
+
+.dark-mode .input:not(:checked)+.label:hover {
+    background: #cccccc;
+}
+
+.dark-mode .tabs::after {
+    background: #181818;
+}
+
+/* <----------------------------- page-02 css end -----------------------------> */
+
+
+
+/* <----------------------------- page-03 css start -----------------------------> */
+.PB-range-slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 4px;
+    border-radius: 5px;
+    background: #D5DBE1;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.PB-range-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--point-color);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.PB-range-slider::-webkit-slider-thumb:hover {
+    box-shadow: 0px 0px 0px 8px rgba(82, 179, 248, 0.3);
+    transition: 0.3s ease-in-out;
+}
+
+.PB-range-slider::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #181818;
+    cursor: pointer;
+}
+
+.PB-range-slider-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    /* padding: 1rem; */
+    /* box-shadow: 0px 1px 2px 0px #1F1E241F; */
+}
+
+.PB-range-slidervalue {
+    font-weight: 600;
+    min-width: 40px;
+    text-align: right;
+}
+
+/* <----------------------------- page-03 css end -----------------------------> */

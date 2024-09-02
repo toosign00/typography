@@ -1,0 +1,143 @@
+.intro-wrap {
+    margin-top: 4.375rem;
+    padding: 0 4.688rem; /* 상하 마진 0px, 좌우 마진 75px */
+}
+
+.intro-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.intro-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: left;
+    width: 100%;
+
+}
+.intro-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.intro-main-img {
+    width: 50%;
+    height: auto;
+}
+
+.main-text {
+    font-size: 1.125rem;
+    font-weight: 400;
+    text-align: left;
+    width: 100%;
+}
+
+.sub-text-title {
+    font-size: 3.5rem;
+    font-weight: 600;
+    text-align: left;
+    margin-top: 2rem;
+}
+
+.sub-text-01 {
+    font-family: 'Arita';
+    font-size: 3rem;
+    font-weight: 400;
+    text-align: left;
+    margin-top: 1rem;
+}
+
+.sub-text-02 {
+    font-family: 'MaruBuri';
+    font-size: 3rem;
+    font-weight: 400;
+    text-align: left;
+    margin-top: 1rem;
+}
+
+.sub-text-03 {
+    font-family: 'Arita buri';
+    font-size: 3rem;
+    font-weight: 400;
+    text-align: left;
+    margin-top: 1rem;
+}
+
+.sub-text-01-2 {
+    font-family: 'Univers', sans-serif;
+    font-size: 3rem;
+    font-weight: 400;
+    text-align: left;
+    margin-top: 1rem;
+}
+
+.sub-text-02-2 {
+    font-family: 'Frutiger', sans-serif;
+    font-size: 3rem;
+    font-weight: 400;
+    text-align: left;
+    margin-top: 1rem;
+}
+
+@media screen and (min-width: 2561px) {
+    .sub-text-title {
+        font-size: 5rem;
+    }
+    
+}
+
+@media screen and (max-width: 2560px) {
+    .sub-text-title {
+        font-size: 3.5rem;
+    }
+    
+}
+@media screen and (max-width: 1920px) {
+    .sub-text-title {
+        font-size: 3rem;
+    }
+
+}
+
+@media screen and (max-width: 1440px) {
+    .sub-text-title {
+        font-size: 2.5rem;
+    
+    }
+}
+
+@media screen and (max-width: 1180px) {
+    .intro-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro-title {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .sub-text-title {
+        font-size: 2rem;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .sub-text-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .sub-text-title {
+        font-size: 1rem;
+    }
+}

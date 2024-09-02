@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typography</title>
+    <link rel="icon" href="/image/tab_icon.png"/> <!-- favicon -->
+    <link rel="apple-touch-icon" href="/image/tab_icon.png"/> <!-- apple-touch-icon -->
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Carattere&family=Hahmlet:wght@100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Jua&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Carattere, Roboto, Lora, Playfair Display, Hanken Grotesk, Montserrat, Hahmlet, Jua Font  -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" /> <!-- Pretendard font -->
+    <link rel="stylesheet" href="./css/global.css"> <!-- global css -->
+    <link rel="stylesheet" href="./css/main.css"> <!-- main css -->
+</head>
+
+<body class="loading">
+    <script>
+
+        // 페이지 로드 전에 다크 모드 설정 적용
+        (function() {
+        const isDarkMode = sessionStorage.getItem('darkMode') === 'true';
+        if (isDarkMode) {
+
+        document.body.classList.add('dark-mode');
+        }
+        })();
+        
+    </script>
+    
+    <video class="background-video" autoplay loop muted playsinline>
+        <source src="./video/wave-lightmode.mp4" type="video/mp4">
+        <source src="./video/wave-darkmode.mp4" type="video/mp4">
+    </video>
+
+    <header> <!-- 헤더 start -->
+        <!-- ========== width 851px 이상 ========== -->
+        <a href="index.html" class="header-link"> <!-- 로고 -->
+            <img src="./image/logo.svg" alt="로고" class="header-logo">
+        </a>
+        <nav> <!-- 네비게이션 -->
+        <div class="nav-links"> 
+            <a href="./page-01.html" class="nav-link">서체의 역사</a>
+            <a href="./page-02.html" class="nav-link">자간과 행간 사이</a>
+            <a href="./page-03.html" class="nav-link">크기와 무게</a>
+            <a href="./page-04.html" class="nav-link">여러가지 폰트</a>
+            <a href="./page-05.html" class="nav-link">서체 디자이너</a>
+        </div>
+        <!-- ========== width 851px 이상 ========== -->
+
+        <!-- ========== width 850px 이하 ========== -->
+        <button class="menu-btn"> <!-- 메뉴 버튼 -->
+            <img src="./image/menu-icon.svg" alt="메뉴" id="tech-btn">
+        </button>
+        <div class="toggle-nav-container">
+            <div class="toggle-nav">
+                <a href="./page-01.html" class="nav-link">서체의 역사</a>
+                <a href="./page-02.html" class="nav-link">자간과 행간 사이</a>
+                <a href="./page-03.html" class="nav-link">크기와 무게</a>
+                <a href="./page-04.html" class="nav-link">여러가지 폰트</a>
+                <a href="./page-05.html" class="nav-link">서체 디자이너</a>
+            </div>
+        </div>
+        <!-- ========== width 850px 이하 ========== -->
+        </nav>
+        <div class="toggle-switch"> <!-- 다크 모드 토글 스위치 -->
+            <label class="switch" for="darkModeToggle">
+                <input type="checkbox" id="darkModeToggle" class="checkbox">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </header> <!-- 헤더 end -->
+    
+    <main> <!-- 메인 콘텐츠 start -->
+        <section>
+            <div class="titles">
+                <h1 class="title-1">TY<span class="title-2">PO</span><br><span class="title-3">GRAPHY</span></h1>
+                <h1 class="sub-title">타이포그래피는&nbsp;&nbsp;&nbsp;<span class="bracket-adjust">[</span><span id="change-text"> 들려야 </span><span class="typing-cursor"></span><span class="bracket-adjust">]</span>&nbsp;&nbsp;&nbsp;한다.</h1>
+            </div>
+        </section>
+    </main> <!-- 메인 콘텐츠 end -->
+
+    <footer> <!-- 푸터 start -->
+        <a href="index.html">
+            <img src="./image/logo.svg" alt="로고" class="footer-logo">
+        </a>
+        <div class="footer-text-wrap">
+            <p class="footer-text">ⓒ 2024. HyunSoo Ro All rights reserved.</p>
+            <p class="footer-text">Contact : toosign22361041@kaywon.ac.kr</p>
+        </div>
+    </footer> <!-- 푸터 end -->
+
+    <script src="./script/global.js"></script>
+    <script src="./script/main.js"></script>
+</body>
+
+</html>

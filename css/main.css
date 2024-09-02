@@ -1,0 +1,561 @@
+/* index.html에 적용되는 css */
+
+.background-video {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.titles {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    margin-top: 3.125rem;
+}
+
+.title-1,.title-2,.title-3,.sub-title {
+    white-space: nowrap;
+    color: var(--secondary-color);
+}
+
+.title-1 {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 9.375em;
+    margin: 0 0 3rem 0;
+    line-height: 1;
+
+}
+
+.title-2 {
+    font-family: "Carattere", cursive;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.title-3 {
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.sub-title {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 5em;
+    
+    /* letter-spacing: -.032em; */
+}
+
+.bracket-adjust {
+    position: relative;
+    top: -0.065em; 
+}
+
+.typing-cursor {
+    display: inline-block;
+    position: relative;
+    top: -0.065em; 
+    width: .07em;
+    height: .9em;
+    margin-right: .1em;
+    background-color: var(--secondary-color);
+    animation: blink 1.5s infinite;
+    vertical-align: middle;
+}
+
+@keyframes blink {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+    25%, 75% {
+        opacity: 0;
+    }
+}
+
+.dark-mode .title-1,.dark-mode .title-2,.dark-mode .title-3,.dark-mode .sub-title {
+    color: var(--primary-color);
+}
+
+.dark-mode .typing-cursor {
+    background-color: var(--primary-color);
+}
+
+@media screen and (min-width: 2561px) {
+    .titles {
+        font-size: 28px;
+    }
+
+    .title-1 {
+        margin: 0 0 7rem 0;
+    }
+}
+
+@media screen and (max-width: 2560px) {
+    .titles {
+        font-size: 28px;
+    }
+
+    .title-1 {
+        margin: 0 0 7rem 0;
+    }
+}
+
+@media screen and (max-width: 2519px) {
+    .titles {
+        font-size: 27.5px;
+    }
+}
+
+@media screen and (max-width: 2481px) {
+    .titles {
+        font-size: 27px;
+    }
+}
+
+@media screen and (max-width: 2444px) {
+    .titles {
+        font-size: 26.5px;
+    }
+}
+
+
+@media screen and (max-width: 2406px) {
+    .titles {
+        font-size: 26px;
+    }
+}
+
+
+@media screen and (max-width: 2368px) {
+    .titles {
+        font-size: 25.5px;
+    }
+}
+
+@media screen and (max-width: 2331px) {
+    .titles {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 2293px) {
+    .titles {
+        font-size: 24.5px;
+    }
+}
+
+@media screen and (max-width: 2255px) {
+    .titles {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 2218px) {
+    .titles {
+        font-size: 23.5px;
+    }
+}
+
+@media screen and (max-width: 2180px) {
+    .titles {
+        font-size: 23px;
+    }
+}
+
+@media screen and (max-width: 2143px) {
+    .titles {
+        font-size: 22.5px;
+    }
+}
+
+@media screen and (max-width: 2105px) {
+    .titles {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 2067px) {
+    .titles {
+        font-size: 21.5px;
+    }
+}
+
+@media screen and (max-width: 2030px) {
+    .titles {
+        font-size: 21px;
+    }
+}
+
+@media screen and (max-width: 1992px) {
+    .titles {
+        font-size: 20.5px;
+    }
+}
+
+@media screen and (max-width: 1955px) {
+    .titles {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1920px) {
+    .titles {
+        font-size: 21px;
+    }
+
+    .title-1 {
+        margin: 0 0 5rem 0;
+    }
+}
+
+@media screen and (max-width: 1893px) {
+    .titles {
+        font-size: 20.5px;
+    }
+}
+
+@media screen and (max-width: 1855px) {
+    .titles {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1818px) {
+    .titles {
+        font-size: 19.5px;
+    }
+}
+
+@media screen and (max-width: 1780px) {
+    .titles {
+        font-size: 19px;
+    }
+}
+
+@media screen and (max-width: 1742px) {
+    .titles {
+        font-size: 18.5px;
+    }
+}
+
+@media screen and (max-width: 1705px) {
+    .titles {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 1667px) {
+    .titles {
+        font-size: 17.5px;
+    }
+}
+
+@media screen and (max-width: 1629px) {
+    .titles {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 1592px) {
+    .titles {
+        font-size: 16.5px;
+    }
+}
+
+
+@media screen and (max-width: 1555px) {
+    .titles {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1517px) {
+    .titles {
+        font-size: 15.5px;
+    }
+}
+
+@media screen and (max-width: 1479px) {
+    .titles {
+        font-size: 15px;
+    }
+}
+
+
+@media screen and (max-width: 1442px) {
+    .titles {
+        font-size: 14.5px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .titles {
+        font-size: 16px;
+    }
+
+    .title-1 {
+        margin: 0 0 3rem 0;
+    }
+
+}
+
+@media screen and (max-width: 1417px) {
+    .titles {
+        font-size: 15.5px;
+    }
+}
+
+@media screen and (max-width: 1379px) {
+    .titles {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 1342px) {
+    .titles {
+        font-size: 14.5px;
+    }
+}
+
+@media screen and (max-width: 1306px) {
+    .titles {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1267px) {
+    .titles {
+        font-size: 13.5px;
+    }
+}
+
+@media screen and (max-width: 1229px) {
+    .titles {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 1192px) {
+    .titles {
+        font-size: 12.5px;
+    }
+}
+
+@media screen and (max-width: 1153px) {
+    .titles {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 1117px) {
+    .titles {
+        font-size: 11.5px;
+    }
+}
+
+@media screen and (max-width: 1079px) {
+    .titles {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 1041px) {
+    .titles {
+        font-size: 10.5px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .titles {
+        font-size: 11px;
+    }
+
+    .title-1 {
+        margin: 0 0 2rem 0;
+    }
+}
+
+@media screen and (max-width: 1004px) {
+    .titles {
+        font-size: 10.5px;
+    }
+}
+
+@media screen and (max-width: 966px) {
+    .titles {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 928px) {
+    .titles {
+        font-size: 9.5px;
+    }
+}
+
+@media screen and (max-width: 891px) {
+    .titles {
+        font-size: 9px;
+    }
+}
+
+@media screen and (max-width: 853px) {
+    .titles {
+        font-size: 8.5px;
+    }
+}
+
+@media screen and (max-width: 815px) {
+    .titles {
+        font-size: 8px;
+    }
+}
+
+@media screen and (max-width: 778px) {
+    .titles {
+        font-size: 7.5px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .titles {
+        font-size: 8.5px;
+    }
+
+    .title-1 {
+        margin: 0 0 1.5rem 0;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .titles {
+        font-size: 8px;
+    }
+}
+
+@media screen and (max-width: 716px) {
+    .titles {
+        font-size: 7.5px;
+    }
+}
+
+@media screen and (max-width: 678px) {
+    .titles {
+        font-size: 7px;
+    }
+}
+
+@media screen and (max-width: 641px) {
+    .titles {
+        font-size: 6.5px;
+    }
+}
+
+@media screen and (max-width: 603px) {
+    .titles {
+        font-size: 6px;
+    }
+}
+
+@media screen and (max-width: 565px) {
+    .titles {
+        font-size: 5.5px;
+    }
+}
+
+@media screen and (max-width: 528px) {
+    .titles {
+        font-size: 5px;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .titles {
+        font-size: 4.5px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .titles {
+        font-size: 5.5px;
+    }
+
+    .title-1 {
+        margin: 0 0 1rem 0;
+    }
+}
+
+@media screen and (max-width: 478px) {
+    .titles {
+        font-size: 5px;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .titles {
+        font-size: 4.5px;
+    }
+}
+
+@media screen and (max-width: 403px) {
+    .titles {
+        font-size: 4px;
+    }
+}
+
+@media screen and (max-width: 365px) {
+    .titles {
+        font-size: 3.5px;
+    }
+}
+
+@media screen and (max-width: 328px) {
+    .titles {
+        font-size: 3px;
+    }
+}
+
+@media screen and (max-width: 290px) {
+    .titles {
+        font-size: 2.5px;
+    }
+}
+
+@media screen and (max-width: 252px) {
+    .titles {
+        font-size: 2px;
+    }
+}
+
+@media screen and (max-width: 214px) {
+    .titles {
+        font-size: 1.5px;
+    }
+}
+
+@media screen and (max-width: 176px) {
+    .titles {
+        font-size: 1px;
+    }
+}
+
+@media screen and (max-width: 138px) {
+    .titles {
+        font-size: 0.5px;
+    }
+}
+
